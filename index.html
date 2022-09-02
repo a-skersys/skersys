@@ -3,8 +3,10 @@
 <html>
     <head>
         <title>Skersys</title>
-        <meta name="description" content="Our first page">
-        <meta name="keywords" content="html tutorial template">
+        <meta name="description" content="Web Developer Portofolion">
+        <meta name="keywords" content="html css javascript web developer skersys">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Raleway:wght@600&family=Raleway:wght@800&family=Source+Serif+Pro:wght@400&family=Source+Serif+Pro:wght@600&family=Source+Serif+Pro:wght@800&display=swap" rel="stylesheet"> 
@@ -75,7 +77,14 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </div>
-                <div class="language lang-current"><div class="lang-en">EN</div><a href="">English</a></div>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-globe-africa"></i> English</button>
+                    <div class="dropdown-content">
+                        <div class="language lang-current"><div class="lang-en">EN</div>English</div>
+                        <div class="language lang-select"><div class="lang-de">DE</div><a href="">Deutsch</a></div> 
+                        <div class="language lang-select"><div class="lang-lt">LT</div><a href="">Lietuviškai</a></div>
+                    </div>
+                  </div>
             </div>          
         </nav>
 
@@ -101,8 +110,8 @@
                         class="dark-icon">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <label class="theme-switch" for="theme-toggle">
-                        <input type="checkbox" id="theme-toggle"/>
+                    <label class="theme-switch" for="theme-toggle-mobile">
+                        <input type="checkbox" id="theme-toggle-mobile"/>
                         <div class="slider round"></div>
                     </label>
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -373,7 +382,7 @@
                     <p>I am incredibly curious of what you have to tell me!
                     <form class="contact-form">
                         <label for="c-name">Name:</label>
-                        <input type="text" id="c-name" class="c-name" required placeholder="Jane/John Doe">
+                        <input type="text" id="c-name" class="c-name" required placeholder="J. Doe">
 
                         <label for="c-email">Email:</label>
                         <input type="email" id="c-email" class="c-email" required placeholder="name@domain.com">

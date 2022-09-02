@@ -250,14 +250,17 @@ input:checked + .slider:before {
     height: 17px;
     margin: 0 5px;
 }
-  
 
-.desktop > .nav-links > .language {
+.language {
     cursor: pointer;
-    margin-left: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.lang-current {
+    cursor: default;
+    color: var(--highlight-color);
 }
 
 .lang-current > div, .lang-select > div {
@@ -284,6 +287,71 @@ input:checked + .slider:before {
     color: var(--background-color);
 }
 
+.lang-select:hover > a {
+    color: var(--text-color);
+}
+
+.lang-select:hover > div {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 16px;
+    font-family: var(--font-sans-serif), sans-serif;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.fa-globe-africa {
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color-dimmed);
+    min-width: 160px;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content > div {
+    padding: 12px;
+    padding-left: 17px;
+    font-size: 0.8em;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    color: var(--highlight-color);
+    background-color: var(--background-color-dimmed);
+}
+
+.dropdown:hover .dropbtn::after {
+    content: " ";
+}
 
 #logo {
     position: fixed;
@@ -291,12 +359,12 @@ input:checked + .slider:before {
     padding-top: 10px;
     padding-left: 20px;
     justify-content: flex-start;
+    z-index: 9;
 }
 
 /* Menu Mobile */
 
 .menu-toggle {
-    /* ALWAYS KEEPING THE TOGGLER OR THE CHECKBOX ON TOP OF EVERYTHING :  */
     z-index: 5;
     height: 50px;
     width: 50px;
@@ -314,9 +382,6 @@ input:checked + .slider:before {
     height: 40px;
     width: 40px;
     padding: 0.6rem;
-  
-  /* FOR DISPLAYING EVERY ELEMENT IN THE CENTER : */
-  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,41 +423,30 @@ input:checked + .slider:before {
     
 }
 
-/* AND ROTATING THE TOP AND BOTTOM LINES :  */
-
 .menu-toggle:checked + .hamburger > div::after{
     top: 0;
     transform: rotate(135deg);
     
 }
 
-
-/* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
-
 .menu{
     background-color: var(--background-color-dimmed);
-    border-left: 5px solid var(--background-color);
-    width: 200px;
-    transform: translate(200px);
+    width: 100%;
+    transform: translate(110%);
     float: right;
     height: 100vh;
     color: var(--text-color);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 100px;
 }
-
-/* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
 
 .menu-toggle:checked ~ .menu{
-    width: 200px;
-    transform: translate(0);
+    
+    transform: translate(0px);
     
 }
-
-
-/* STYLING THE LIST :  */
 
 .menu a {
     color: var(--text-color);
@@ -411,27 +465,6 @@ input:checked + .slider:before {
     padding-left: 20px;
 }
 
-.menu > .language {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.lang-current {
-    cursor: default;
-    color: var(--highlight-color);
-}
-
-.lang-select:hover > a {
-    color: var(--text-color);
-}
-
-.lang-select:hover > div {
-    background-color: var(--highlight-color);
-    color: white;
-}
-
 .menu > .theme > .dark-icon {
     height: 17px;
     margin-right: 10px;
@@ -442,7 +475,6 @@ input:checked + .slider:before {
     margin-left: 10px;
 }
 
-/* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
 
 /* Greeting */
@@ -494,7 +526,8 @@ input:checked + .slider:before {
     padding-right: 5px;
 }
 
-.title-social a:hover {
+.title-social a:hover,
+.title-social a:active {
     color: var(--highlight-color)
 }
 
@@ -745,7 +778,8 @@ input:checked + .slider:before {
     transition: all 0.2s ease-in-out;
 }
 
-.about a:hover {
+.about a:hover,
+.about a:active {
     color: var(--highlight-color);
     text-decoration: none;
 }
@@ -895,7 +929,10 @@ input:checked + .slider:before {
     color: var(--card-text-color);
 }
 
-.card-demo a:hover, .card-github a:hover {
+.card-demo a:hover,
+.card-demo a:active,
+.card-github a:hover,
+.card-github a:active {
     color: var(--highlight-color);
 }
 

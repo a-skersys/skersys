@@ -1,6 +1,9 @@
+// Dark/light theme change
+
 function getTheme() {
   return localStorage.getItem('theme') || 'dark';
 }
+
 function saveTheme(theme) {
   localStorage.setItem('theme', theme);
 }
@@ -9,6 +12,13 @@ const colorScheme = document.querySelector('meta[name="color-scheme"]');
 function applyTheme(theme) {
   document.body.className = theme;
   colorScheme.content = theme;
+  if (theme == "dark") {
+    themeToggler.checked = false;
+    themeTogglerMobile.checked = false;
+  } else if (theme == "light") {
+    themeToggler.checked = true;
+    themeTogglerMobile.checked = true;
+  }
 }
 
 function rotateTheme(theme) {
@@ -19,6 +29,7 @@ function rotateTheme(theme) {
 }
 
 const themeToggler = document.getElementById('theme-toggle');
+const themeTogglerMobile = document.getElementById('theme-toggle-mobile');
 
 let theme = getTheme();
 applyTheme(theme);
@@ -27,15 +38,32 @@ themeToggler.onclick = () => {
   const newTheme = rotateTheme(theme);
   applyTheme(newTheme);
   saveTheme(newTheme);
+  theme = newTheme;
+}
 
+themeTogglerMobile.onclick = () => {
+  const newTheme = rotateTheme(theme);
+  applyTheme(newTheme);
+  saveTheme(newTheme);
   theme = newTheme;
 }
 
 
+// Menu closing after clicking the link
 
+var goToPage = document.querySelectorAll(".mobile .menu a");
+
+for (var i = goToPage.length; i--; ) {
+  goToPage[i].addEventListener( "click", function() {
+    document.querySelector(".menu-toggle").checked = false;
+  });
+}
+
+
+
+// Reveal effect
 
 window.addEventListener("scroll", reveal);
-
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
@@ -51,6 +79,8 @@ function reveal() {
   }
 }
 
+
+// Movements of eyes
 
 var  eye = document.getElementsByClassName("eye-green");
 document.onmousemove = function() {
