@@ -95,3 +95,23 @@ document.onmousemove = function() {
   eye[0].style.cssText = "left: " + a + "%; top: " + b  + "%;";
   eye[1].style.cssText = "left: " + a + "%; top: " + b + "%;"; 
 }
+
+
+// Carousel
+
+var elem = document.querySelector('.main-carousel');
+var flkty = new Flickity( elem, {
+  freeScroll: true,
+  contain: true,
+  wrapAround: false,
+  resize: true,
+  pageDots: false,
+  cellAlign: 'center',
+  contain: true
+});
+
+// element argument can be a selector string
+//   for an individual element
+var flkty = new Flickity( '.main-carousel', {
+
+});
