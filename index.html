@@ -39,7 +39,7 @@
         <nav class="navMenu desktop">
             <a href="#"><img src="images\logo.svg" alt="" id="logo"></a>
             <div class="nav-links">
-                <a href="#work" id="menu-work">Projects</a>
+                <a href="#projects" id="menu-projects">Projects</a>
                 <a href="#about" id="menu-about">About</a>
                 <a href="#contact" id="menu-contact">Contact</a>                       
                 <div class="theme">
@@ -85,7 +85,7 @@
                     <div class="dropdown-content">
                         <div class="language lang-current"><div class="lang-en">EN</div>English</div>
                         <div class="language lang-select"><div class="lang-de">DE</div><a href="">Deutsch</a></div> 
-                        <div class="language lang-select"><div class="lang-lt">LT</div><a href="">Lietuviškai</a></div>
+                        <div class="language lang-select"><div class="lang-lt">LT</div><a href="lt.html">Lietuviškai</a></div>
                     </div>
                   </div>
             </div>          
@@ -96,7 +96,7 @@
             <input type="checkbox" class="menu-toggle">
             <div class="hamburger"><div></div></div>
             <div class="menu">
-                <a href="#work" id="menu-work">Projects</a>
+                <a href="#projects" id="menu-projects">Projects</a>
                 <a href="#about" id="menu-about">About</a>
                 <a href="#contact" id="menu-contact">Contact</a>                       
                 <div class="separator"></div>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="language lang-current"><div class="lang-b">EN</div>English</div>
                 <div class="language lang-select"><div class="lang-de">DE</div><a href="">Deutsch</a></div> 
-                <div class="language lang-select"><div class="lang-lt">LT</div><a href="">Lietuviškai</a></div>         
+                <div class="language lang-select"><div class="lang-lt">LT</div><a href="lt.html">Lietuviškai</a></div>         
             </div>
 
 
@@ -205,7 +205,7 @@
                             </div>
                         </div>
                         <div class="carousel-cell">
-                            <div class="banner-logo invert">
+                            <div class="banner-logo">
                                 <img src="images\banner\github-icon-1.svg">
                                 <p>GitHub</p>
                             </div>
@@ -226,6 +226,12 @@
                             <div class="banner-logo">
                                 <img src="images\banner\json.svg">
                                 <p>JSON</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="banner-logo">
+                                <img src="images\banner\inkscape-logo-2.svg">
+                                <p>Inkscape</p>
                             </div>
                         </div>
                         <!-- <div class="carousel-cell">
@@ -258,9 +264,9 @@
 
 
             <div class="full-width bg-projects" class="reveal">
-                <div id="work">
+                <div id="projects">
                     
-                    <h1 class="work"><span class="number">§01</span>Projects</h1>
+                    <h1 class="projects"><span class="number">§01</span>Projects</h1>
                     <!-- <p class="filler">001. Projects</p> -->
                                       
                     <div class="gallery">
@@ -467,15 +473,15 @@
                 <div id="contact" class="contact">
                     <h1><span class="number">§03</span>Contact me</h1>
                     <p>I am incredibly curious of what you have to tell me!
-                    <form class="contact-form">
-                        <label for="c-name">Name:</label>
-                        <input type="text" id="c-name" class="c-name" required placeholder="J. Doe">
+                    <form class="contact-form" action="https://getform.io/f/2f14e486-eb54-479e-9cee-66ccb6d536aa" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" class="c-name" required placeholder="John Doe">
 
-                        <label for="c-email">Email:</label>
-                        <input type="email" id="c-email" class="c-email" required placeholder="name@domain.com">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="email" required placeholder="john@doe.com">
                         
-                        <label for="c-text">Message:</label>
-                        <textarea rows=8 id="c-text" class="c-text" required placeholder="Hi, Audrius!"></textarea>
+                        <label for="message">Message:</label>
+                        <textarea rows=8 name="message" id="message" class="message" required placeholder="Hi, Audrius!"></textarea>
                         
                         <input type="submit" id="submit" class="submit" value="Let it fly">
                     </form>
