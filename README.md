@@ -20,7 +20,9 @@ Icons of various functions are imported, using API from https://fontawesome.com/
 
 Form submitions are handeled using service from https://getform.io/.
 
-The website is hosted on https://www.netlify.com/
+The website is hosted on https://www.netlify.com/.
+
+The domainprovider is https://porkbun.com/.
 
 ## License
 
