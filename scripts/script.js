@@ -111,7 +111,6 @@ document.onmousemove = function() {
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   freeScroll: true,
-  initialIndex: 4,
   contain: true,
   wrapAround: false,
   resize: true,
