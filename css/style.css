@@ -954,6 +954,7 @@ h1.section::before, h1.section::after {
 
 .card-text, .card-links {
     margin: 30px;
+    margin-bottom: 0;
     font-size: 15px;
 }
 
