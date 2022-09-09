@@ -19,7 +19,7 @@ function applyTheme(theme) {
   if (theme == "dark") {
     themeToggler.checked = false;
     themeTogglerMobile.checked = false;
-    noise.style.opacity = "0.07";
+    noise.style.opacity = "0.1";
     dust.style.opacity = "0";
     noiseBackground.style.opacity = "0.5";
   } else if (theme == "light") {
@@ -165,7 +165,7 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 3,
+      "value": 2,
       "random": true,
       "anim": {
         "enable": true,

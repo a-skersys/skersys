@@ -24,9 +24,9 @@ body.light {
     --background-color: rgb(230, 230, 230);
     --background-color-dimmed: rgba(230, 230, 230, 0.8);
     --text-color: rgb(31, 31, 21);
-    --highlight-color: #2faa60;
+    --highlight-color: rgb(47, 170, 96);
     --highlight-color-darker: rgb(47, 170, 96);
-    --light-color: #ffffff;
+    --light-color: rgb(255, 255, 255);
     --highlight-color-dimmed: rgb(80, 75, 31);
     --last-name-color: rgb(70, 70, 70);
     --about-text-color: rgba(0, 0, 0, 0.05);
@@ -131,11 +131,11 @@ body {
     background-image: url(../images/noise.png);
     background-repeat: repeat;
     position: absolute;
-    opacity: 0.07;
+    opacity: 0.1;
     width: 100%;
     height: 100vh;
     animation: noise 0.3s steps(8,end) infinite both;
-    z-index: -1;
+    z-index: 2;
 }
 
 @keyframes noise {
@@ -153,7 +153,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
-    z-index: -1;
+    z-index: 2;
 }
 
 main {
@@ -413,7 +413,7 @@ input:checked + .slider:before {
     font-size: 1em;
     border: none;
     cursor: pointer;
-    width: 120px;
+    width: 135px;
     text-align: left;
     vertical-align: middle;
     border-radius: 20px 0 0 0;
@@ -482,7 +482,7 @@ input:checked + .slider:before {
     margin-left: 10px;
     font-weight: 800;
     font-size: 1.2rem;
-    z-index: 9;
+    z-index: 8;
 }
 
 #logo-mobile > a {
@@ -498,6 +498,7 @@ input:checked + .slider:before {
     right: 5px;
     cursor: pointer;
     opacity: 0;
+    z-index: 9;
 }
 
 .hamburger {
@@ -610,6 +611,9 @@ input:checked + .slider:before {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    z-index: -9;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .title > h1 {
@@ -622,6 +626,7 @@ input:checked + .slider:before {
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: 0px;
+
 
 }
 
@@ -636,8 +641,9 @@ input:checked + .slider:before {
 
 .title-social {
     position: absolute;
-    transform: translate(-20px, 90px);
+    transform: translate(-60px, 90px);
     display: flex;
+    z-index: 3;
 }
 
 .title-social a {
@@ -655,6 +661,7 @@ input:checked + .slider:before {
 .short-info {
     margin-left: 50px;
     font-size: 1em;
+    z-index: 3;
 }
 
 .short-info > p > strong {
@@ -1252,6 +1259,12 @@ footer {
 
 /* RESPONSIVE */
 
+@media only screen and (max-width: 900px) {
+    .title-social {
+        left: 430px
+    }
+}
+
 @media only screen and (max-width: 750px) {
 
     .navMenu.mobile {
@@ -1344,6 +1357,7 @@ footer {
     .title-social {
           transform: none;
           margin-top: -50px;
+          left: auto;
     }
 
     .title-social a {
