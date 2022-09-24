@@ -502,7 +502,10 @@
 
         <script>
             window.onload = function() {{
-                document.querySelector(".modal").style.display = "none";
+                setTimeout(function() {
+                    document.querySelector(".modal").style.display = "none";
+                    document.querySelector(".modal").style.opacity = "1";
+                }, 1000);
             }};
         </script>
 
