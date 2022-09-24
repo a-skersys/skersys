@@ -1170,69 +1170,67 @@ h1.section::before, h1.section::after {
     background: black;    
 }
 
- /* The Modal (background) */
- .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 9; /* Sit on top */
+.modal {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    z-index: 9;
     left: 0;
     top: 0;
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
-    overflow: none; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+    background-color: rgba(0,0,0,0.4);
+}
   
-  /* Modal Content/Box */
-  .modal-content {
+.modal-content {
     background-color: var(--card-background-color);
     color: var(--card-text-color);
-    margin: auto; /* 15% from the top and centered */
+    margin: auto;
     margin-top: 15%;
     padding: 20px;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
     max-width: 500px;
   }
 
-  .resume-email {
+.resume-email {
     background-color: var(--card-tags-color);
     color: var(--card-text-color);
-  }
+}
 
-  .resume-submit {
+.resume-submit {
     background-color: var(--card-tags-color);
     color: var(--card-text-color);
     width: 50%;
     margin: auto;
-  }
+}
 
-  .resume-submit:hover {
+.resume-submit:hover {
     border: 1px solid var(--highlight-color-darker);
-  }
+}
 
-  .resume-submit:active {
+.resume-submit:active {
     background-color: var(--highlight-color-darker);
     color: var(--card-background-color);
-  }
+}
   
-  /* The Close Button */
-  .close {
+.close {
     color: var(--card-text-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
     color: var(--highlight-color-darker);
     text-decoration: none;
     cursor: pointer;
-  } 
+} 
 
-  .resume-submit {
+.resume-submit {
     margin-top: 20px;
-  }
+}
 
 /* CONTACT SECTION */
 
