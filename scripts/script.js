@@ -124,6 +124,40 @@ var flkty = new Flickity( '.main-carousel', {
 });
 
 
+// Modal
+var modalResume = document.getElementById("modalResume");
+
+// Get the button that opens the modal
+var btnResume = document.getElementById("btnResume");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btnResume.onclick = function() {
+  modalResume.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modalResume.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modalResume.style.display = "none";
+  }
+}
+
+const resumeForm = document.getElementById('resume-form');
+const download = document.getElementById('download');
+form.addEventListener('submit', function() {
+  download.style.display= "none";
+});
+
+
+
 
 // Dust paricles
 
