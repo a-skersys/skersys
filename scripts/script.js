@@ -132,6 +132,7 @@ var span = document.getElementsByClassName("close")[0];
 
 btnResume.onclick = function() {
   modalResume.style.display = "block";
+}
 
 span.onclick = function() {
   modalResume.style.display = "none";
