@@ -252,6 +252,12 @@
                         </div>
                         <div class="carousel-cell">
                             <div class="banner-logo">
+                                <img src="images\banner\mui-5.svg">
+                                <p>MUI</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="banner-logo dark">
                                 <img src="images\banner\github-icon-1.svg">
                                 <p>GitHub</p>
                             </div>
@@ -432,7 +438,7 @@
                             <p>I've always been fascinated by magic of putting some <strong>code</strong> and inspiring life to things.</p>
                             <p>To combine all these skills, I am looking forward to be <strong>part of your team</strong>.</p>
                             <p class="about-bold">It would be great pleasure if you contacted me</p>
-                            <p><a href=""><i class="fas fa-arrow-circle-down"></i> Get full resume</a></p>
+                            <p><btn id="btnResume"><i class="fas fa-arrow-circle-down"></i> Get full CV</btn></p>
                             <p><a href="#contact"><i class="fas fa-envelope"></i> Contact me</a></p>
 
                             
@@ -444,6 +450,17 @@
                 </div>
             </div>
 
+            <div id="modalResume" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>To protect from unwanted scammers, please enter your email to download CV.</p>
+                    <form name="resume" method="POST" data-netlify="true" class="resume-form" id="resume-form" action="https://bit.ly/skersys_cv_en" target="_blank">
+                        <input type="email" name="email" id="email" class="resume-email" required placeholder="Your Email address">
+                        <input type="submit" id="resume-submit" class="resume-submit" value="Download CV">
+                    </form>
+                </div>
+            </div>
+
             
 
 
@@ -452,7 +469,7 @@
                 <div id="contact" class="contact">
                     <h1 class="section">Contact</h1>
                     <p>I am incredibly curious of what you have to tell me!
-                    <form class="contact-form" action="https://getform.io/f/2f14e486-eb54-479e-9cee-66ccb6d536aa" method="POST">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
                         <label for="name">Name:</label>
                         <input type="text" name="name" id="name" class="c-name" required placeholder="Your Name">
 

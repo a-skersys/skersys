@@ -15,6 +15,7 @@
        
         <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32"> 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/de.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="css/flickity.css">
 
@@ -252,6 +253,12 @@
                         </div>
                         <div class="carousel-cell">
                             <div class="banner-logo">
+                                <img src="images\banner\mui-5.svg">
+                                <p>MUI</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="banner-logo">
                                 <img src="images\banner\github-icon-1.svg">
                                 <p>GitHub</p>
                             </div>
@@ -432,7 +439,7 @@
                             <p>Ich war schon immer fasziniert von der Magie, <strong>Code</strong> zu setzen und Dingen Leben einzuhauchen.</p>
                             <p>Um all diese Fähigkeiten zu vereinen, freue ich mich darauf, <strong>Teil Ihres Teams</strong> zu werden.</p>
                             <p class="about-bold">Es würde mich sehr freuen, wenn Sie mit mir Kontakt aufnehmen</p>
-                            <p><a href=""><i class="fas fa-arrow-circle-down"></i> Vollständigen Lebenslauf erhalten</a></p>
+                            <p><btn id="btnResume"><i class="fas fa-arrow-circle-down"></i> Vollständigen Lebenslauf erhalten</btn></p>
                             <p><a href="#contact"><i class="fas fa-envelope"></i> Kontaktieren</a></p>
 
                             
@@ -444,6 +451,16 @@
                 </div>
             </div>
 
+            <div id="modalResume" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Um sich vor unerwünschten Betrügern zu schützen, geben Sie bitte Ihre E-Mail-Adresse ein, um den Lebenslauf herunterzuladen.</p>
+                    <form name="resume" method="POST" data-netlify="true" class="resume-form" id="resume-form" action="https://bit.ly/skersys_cv_de" target="_blank">
+                        <input type="email" name="email" id="email" class="resume-email" required placeholder="Ihre E-Mail-Adresse">
+                        <input type="submit" id="resume-submit" class="resume-submit" value="Lebenslauf herunterladen">
+                    </form>
+                </div>
+            </div>
             
 
 
@@ -452,7 +469,7 @@
                 <div id="contact" class="contact">
                     <h1 class="section">Kontakt</h1>
                     <p>Ich bin unglaublich neugierig, was Sie mir zu sagen haben!
-                    <form class="contact-form" action="https://getform.io/f/2f14e486-eb54-479e-9cee-66ccb6d536aa" method="POST">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
                         <label for="name">Name:</label>
                         <input type="text" name="name" id="name" class="c-name" required placeholder="Ihr Name">
 

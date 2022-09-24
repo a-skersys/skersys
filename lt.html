@@ -15,6 +15,7 @@
        
         <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32"> 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/lt.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="css/flickity.css">
 
@@ -250,6 +251,12 @@
                         </div>
                         <div class="carousel-cell">
                             <div class="banner-logo">
+                                <img src="images\banner\mui-5.svg">
+                                <p>MUI</p>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="banner-logo">
                                 <img src="images\banner\github-icon-1.svg">
                                 <p>GitHub</p>
                             </div>
@@ -429,7 +436,7 @@
                             <p>Mane visa žavėjo magija, parašius <strong>programinį kodą</strong> įkvėpti gyvybę daiktams.</p>
                             <p>Apjunkdamas visus šiuos įgudžius tikiuosi tapti <strong>jūsų komandos dalimi</strong>.</p>
                             <p class="about-bold">Man būtų didžiulė garbė, jeigu su manimi susisiektumėte.</p>
-                            <p><a href=""><i class="fas fa-arrow-circle-down"></i> Parsiųsti pilną gyvenimo aprašymą</a></p>
+                            <p><btn id="btnResume"><i class="fas fa-arrow-circle-down"></i> Parsiųsti pilną gyvenimo aprašymą</btn></p>
                             <p><a href="#contact"><i class="fas fa-envelope"></i> Susisiekti su manimi</a></p>
 
                             
@@ -441,7 +448,16 @@
                 </div>
             </div>
 
-            
+            <div id="modalResume" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Norint apsisaugoti nuo nepageidaujamų sukčių, kad atsisiųstumėte CV, turite įvesti savo el. pašto adresą.</p>
+                    <form name="resume" method="POST" data-netlify="true" class="resume-form" id="resume-form" action="https://bit.ly/skersys_cv_lt" target="_blank">
+                        <input type="email" name="email" id="email" class="resume-email" required placeholder="Jūsų el. pašto adresas">
+                        <input type="submit" id="resume-submit" class="resume-submit" value="Atsisiųsti CV">
+                    </form>
+                </div>
+            </div>
 
 
             <!-- CONTACT PAGE -->
@@ -449,7 +465,7 @@
                 <div id="contact" class="contact">
                     <h1 class="section">Susisiekite</h1>
                     <p>Man nepaprastai įdomu, ką turite man pasakyti!
-                        <form class="contact-form" action="https://getform.io/f/2f14e486-eb54-479e-9cee-66ccb6d536aa" method="POST">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
                         <label for="name">Vardas:</label>
                         <input type="text" name="name" id="name" class="c-name" required placeholder="Jūsų vardas">
 

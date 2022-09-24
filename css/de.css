@@ -1,0 +1,8 @@
+.first-name-ipa:hover::before {
+    content: "/ 'au-drüß /";
+
+}
+
+.last-name-ipa:hover::before {
+    content: "/ sker-'sieß /";
+}

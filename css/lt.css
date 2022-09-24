@@ -1,0 +1,21 @@
+.title-social {
+    transform: translate(10px, 90px);
+}
+
+.first-name-ipa,
+.last-name-ipa,
+.first-name-ipa:hover,
+.last-name-ipa:hover {
+    border-bottom: none;
+}
+
+
+.first-name-ipa:hover::before, .last-name-ipa:hover::before {
+    display: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .title-social {
+        transform: none;
+  }
+}

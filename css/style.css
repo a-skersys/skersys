@@ -169,6 +169,7 @@ main {
     height: 95px;
     background-color: var(--nav-background-color);
     box-shadow: var(--nav-shadow);
+    border-top: var(--highlight-color-darker) 4px solid;
     color: var(--text-color);
     width: 100%;
     display: flex;
@@ -1068,14 +1069,17 @@ h1.section::before, h1.section::after {
     color: var(--highlight-color);
 }
 
-.about a {
+.about a, .about btn {
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .about a:hover,
-.about a:active {
+.about a:active,
+.about btn:hover,
+.about btn:active {
     color: var(--highlight-color);
     text-decoration: none;
 }
@@ -1166,6 +1170,69 @@ h1.section::before, h1.section::after {
     background: black;    
 }
 
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
+    margin: auto; /* 15% from the top and centered */
+    margin-top: 15%;
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+  }
+
+  .resume-email {
+    background-color: var(--card-tags-color);
+    color: var(--card-text-color);
+  }
+
+  .resume-submit {
+    background-color: var(--card-tags-color);
+    color: var(--card-text-color);
+    width: 50%;
+    margin: auto;
+  }
+
+  .resume-submit:hover {
+    border: 1px solid var(--highlight-color-darker);
+  }
+
+  .resume-submit:active {
+    background-color: var(--highlight-color-darker);
+    color: var(--card-background-color);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--card-text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--highlight-color-darker);
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+  .resume-submit {
+    margin-top: 20px;
+  }
 
 /* CONTACT SECTION */
 
@@ -1256,7 +1323,6 @@ footer {
     color: var(--highlight-color);
     text-decoration: none;
 }
-
 
 /* RESPONSIVE */
 
@@ -1422,6 +1488,10 @@ footer {
 
     .about-face {
         height: 450px;
+    }
+
+    .modal-content {
+        margin-top: calc(100vh - 300px);
     }
 
 }
