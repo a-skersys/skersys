@@ -1327,6 +1327,11 @@ footer {
 
 /* THANK YOU PAGE */
 
+.thank-you-page {
+    width: 100vw;
+    height: 100vh;
+}
+
 .thank-you {
     width: 100%;
     height: 100%;
@@ -1334,14 +1339,16 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    margin: 0px;
 }
 
-.thank-you h1 {
+.thank-you h1,
+.thank-you p {
     text-align: center;
 }
 
 .countdown {
+    padding: 20px;
     display: flex;
     position: relative;
     font-size: 3em;
@@ -1358,12 +1365,13 @@ footer {
 
 .thank-you button {
     font-family: var(--font-sans-serif);
-    font-size: 1em;
+    font-size: 17px;
     padding: 10px;
     margin: 10px;
     color: var(--text-color);
     width: 200px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .thank-you a {
