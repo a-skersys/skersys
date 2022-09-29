@@ -665,6 +665,12 @@ input:checked + .slider:before {
     z-index: 3;
 }
 
+.short-info p i {
+    display: inline-block;
+    padding-right: 10px;
+    color: var(--highlight-color);
+}
+
 .short-info > p > strong {
     color: var(--highlight-color);
 }
