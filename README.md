@@ -18,11 +18,13 @@ Carousel of logos are made using API from https://flickity.metafizzy.co/.
 
 Icons of various functions are imported, using API from https://fontawesome.com/.
 
-Form submitions are handeled using service from https://getform.io/.
+Light theme greeting page particles from https://vincentgarreau.com/particles.js/.
+
+Form submitions are handeled using service from https://www.netlify.com/.
 
 The website is hosted on https://www.netlify.com/.
 
-The domainprovider is https://porkbun.com/.
+The domainprovider is https://www.ionos.de/.
 
 ## License
 
