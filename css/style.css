@@ -422,7 +422,7 @@ input:checked + .slider:before {
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-block
 }
 
 .fa-globe-africa {
@@ -435,6 +435,7 @@ input:checked + .slider:before {
     display: none;
     position: absolute;
     background-color: var(--background-color-dimmed);
+    box-shadow: 2px 2px 2px var(--background-color);
     min-width: 160px;
     z-index: 1;
     border-radius: 0 0 0 20px;
@@ -940,6 +941,7 @@ h1.section::before, h1.section::after {
 .card-img {
     overflow: hidden;
     height: 300px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
 }
 
 .card-img > img {
@@ -947,14 +949,19 @@ h1.section::before, h1.section::after {
     height: 300px;
     object-fit: cover;
     filter: none;
+    
 }
 
-.card:hover .card-img > img {
+.card:not(.coming-soon):hover .card-img {
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+}
+
+.card:not(.coming-soon):hover .card-img > img {
     filter: brightness(0.7) contrast(0.7);
     transform: rotate(10deg) scale(1.75) translate(50px, 0px) ;
 }
 
-.card:hover .overlay {
+.card:not(.coming-soon):hover .overlay {
     opacity: 0.6;
 }
 
@@ -1002,6 +1009,7 @@ h1.section::before, h1.section::after {
     background-color: var(--card-tags-color);
     border-radius: 16px;
     width: calc(100% - 10px);
+    cursor: default;
 }
 
 .tag {
