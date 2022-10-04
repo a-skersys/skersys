@@ -128,7 +128,7 @@ body {
 }
 
 .noise {
-    background-image: url(../images/noise.png);
+    background-image: url(../images/noise.svg);
     background-repeat: repeat;
     position: absolute;
     opacity: 0.1;
@@ -691,7 +691,7 @@ input:checked + .slider:before {
 .placeholder {
     background: transparent;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
 }
 
 .banner {
@@ -700,9 +700,8 @@ input:checked + .slider:before {
     margin: 0 auto;
     position: absolute;
     width: 100%;
-    height: 100vh;
-    clip: rect(0, auto, auto, 0);
-    overflow: hidden;
+    height: 150vh;
+    clip: rect(0, auto, 150vh, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -711,7 +710,6 @@ input:checked + .slider:before {
 
 .fixed {
     margin: 0 auto;
-    overflow: hidden;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -734,10 +732,13 @@ input:checked + .slider:before {
 
 .banner-content {
     width: 100vw;
+    min-height: fit-content;
+    min-height: 60%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    overflow-x: auto;
 }
 
 .banner-logo {
@@ -747,6 +748,7 @@ input:checked + .slider:before {
     font-size: 1em;
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
+
 }
 
 .banner-logo > img {
@@ -755,13 +757,10 @@ input:checked + .slider:before {
     transition: all 0.2s ease-in-out;
 }
 
-.invert > img {
-    filter: var(--invert);
+.dark > img {
+    filter: var(--invert) grayscale() brightness(0.7) contrast(0.7);
 }
 
-.invert:hover > img {
-    filter: var(--invert);
-}
 
 .banner-bottom {
     padding-top: 30px;
@@ -1510,15 +1509,12 @@ footer {
         padding: 15px;
     }
 
+
     .banner-top, .banner-bottom {
         font-size: 1em;
         text-transform: none;
         letter-spacing: 0px;
         padding: 0;
-    }
-
-    .banner-logo {
-        padding: 0px;
     }
 
     .banner-logo > img {
@@ -1612,6 +1608,16 @@ footer {
         justify-content: center;
     }
 
+    .banner-logo {
+        padding: 0px;
+        max-width: 70px;
+    }
+
+    .banner-content {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
 }
 
 @media only screen and (max-width: 1500px) {
@@ -1628,6 +1634,10 @@ footer {
     .banner-logo:hover > img {
         filter: none;
     }
+
+    .dark:hover > img {
+        filter: var(--invert);
+    }  
 }
 
 @media (hover: none) {
@@ -1641,8 +1651,11 @@ footer {
 
     .banner-logo > img {
         filter: none;
-    } 
+    }
 
+    .dark > img {
+        filter: var(--invert);
+    }    
  
     .carousel-cell.is-selected > .banner-logo {
         transform: scale(1.1);

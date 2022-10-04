@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458332 26.458334"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="noise.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs2">
+    <filter
+       id="coolEffect-6">
+      <feTurbulence
+         baseFrequency="0.1"
+         type="fractalNoise"
+         numOctaves="2"
+         seed="7329663"
+         id="feTurbulence5-9" />
+    </filter>
+    <filter
+       id="coolEffect-6-0">
+      <feTurbulence
+         baseFrequency="0.1"
+         type="fractalNoise"
+         numOctaves="2"
+         seed="7329663"
+         id="feTurbulence5-9-0" />
+    </filter>
+    <filter
+       id="coolEffect-6-4">
+      <feTurbulence
+         baseFrequency="0.1"
+         type="fractalNoise"
+         numOctaves="2"
+         seed="7329663"
+         id="feTurbulence5-9-05" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="-38.742333"
+     inkscape:cy="28.248429"
+     inkscape:document-units="mm"
+     inkscape:current-layer="svg8"
+     showgrid="false"
+     inkscape:window-width="914"
+     inkscape:window-height="511"
+     inkscape:window-x="702"
+     inkscape:window-y="445"
+     inkscape:window-maximized="0"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <filter
+     id="coolEffect">
+    <feTurbulence
+       baseFrequency="0.1"
+       type="fractalNoise"
+       numOctaves="2"
+       seed="7329663"
+       id="feTurbulence5" />
+  </filter>
+  <g
+     inkscape:label="Sluoksnis 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-270.54163)" />
+  <rect
+     width="300"
+     height="300"
+     id="rect8-6-3"
+     x="0"
+     y="0"
+     transform="matrix(-0.07960265,0,0,-0.07960265,25.574817,25.164669)"
+     style="filter:url(#coolEffect-6-0)" />
+</svg>
