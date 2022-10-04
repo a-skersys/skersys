@@ -14,8 +14,6 @@ Typefaces, used in website are from https://fonts.google.com/.
 
 Logos of languages and tools are from https://worldvectorlogo.com/.
 
-Carousel of logos are made using API from https://flickity.metafizzy.co/.
-
 Icons of various functions are imported, using API from https://fontawesome.com/.
 
 Light theme greeting page particles from https://vincentgarreau.com/particles.js/.
