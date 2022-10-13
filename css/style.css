@@ -732,8 +732,6 @@ input:checked + .slider:before {
 
 .banner-content {
     width: 100vw;
-    min-height: fit-content;
-    min-height: 60%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
