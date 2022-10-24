@@ -734,9 +734,9 @@ input:checked + .slider:before {
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    overflow-x: auto;
+    
 }
 
 .banner-logo {
@@ -1614,6 +1614,7 @@ footer {
     .banner-content {
         display: grid;
         grid-template-columns: auto auto auto auto;
+        overflow-x: auto;
     }
 
 }
