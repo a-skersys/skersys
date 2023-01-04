@@ -1,7 +1,6 @@
 // Dark/light theme change
 
 noise = document.querySelector(".noise");
-dust = document.querySelector(".dust");
 noiseBackground = document.querySelector(".background");
 
 function getTheme() {
@@ -20,13 +19,11 @@ function applyTheme(theme) {
     themeToggler.checked = false;
     themeTogglerMobile.checked = false;
     noise.style.opacity = "0.1";
-    dust.style.opacity = "0";
     noiseBackground.style.opacity = "0.5";
   } else if (theme == "light") {
     themeToggler.checked = true;
     themeTogglerMobile.checked = true;
     noise.style.opacity = "0";
-    dust.style.opacity = "1";
     noiseBackground.style.opacity = "1";
   }
 }
@@ -70,25 +67,6 @@ for (var i = goToPage.length; i--; ) {
 }
 
 
-// Reveal effect
-
-window.addEventListener("scroll", reveal);
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-
 // Movements of eyes
 
 var  eye = document.getElementsByClassName("eye-green");
@@ -105,23 +83,6 @@ document.onmousemove = function() {
   eye[1].style.cssText = "left: " + a + "%; top: " + b + "%;"; 
 }
 
-
-// Carousel
-
-var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity( elem, {
-  freeScroll: true,
-  contain: true,
-  wrapAround: false,
-  resize: true,
-  pageDots: false,
-  cellAlign: 'center',
-  contain: true
-});
-
-var flkty = new Flickity( '.main-carousel', {
-
-});
 
 
 // Modal
@@ -143,116 +104,3 @@ window.onclick = function(event) {
     modalResume.style.display = "none";
   }
 }
-
-// Dust paricles
-
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 355,
-      "density": {
-        "enable": true,
-        "value_area": 789.1476416322727
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.48927153781200905,
-      "random": false,
-      "anim": {
-        "enable": true,
-        "speed": 0.2,
-        "opacity_min": 0.2,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 4,
-        "size_min": 0,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 1,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 0.2,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "bubble"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 83.91608391608392,
-        "size": 1,
-        "duration": 3,
-        "opacity": 1,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
