@@ -1526,17 +1526,18 @@ footer {
 
     .title > h1 {
         justify-content: center;
-        font-size: 100px;
-        margin-top: -47px;
+        font-size: 80px;
+        margin-top: -40px;
+        letter-spacing: -7px;
     }
 
     h1.first-name {
         margin-right: -60px;
-        font-size: 90px;
+        font-size: 70px;
     }
     
     .short-info {
-        margin-top: 120px;
+        margin-top: 0px;
         margin-left: 0px;
         font-size: 1em;
     }
