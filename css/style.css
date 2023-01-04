@@ -22,7 +22,7 @@ html {
 
 body.light {
     --background-color: rgb(230, 230, 230);
-    --background-color-dimmed: rgba(230, 230, 230, 0.8);
+    --background-color-dimmed: rgb(230, 230, 230);
     --text-color: rgb(31, 31, 21);
     --highlight-color: rgb(47, 170, 96);
     --highlight-color-darker: rgb(47, 170, 96);
@@ -43,8 +43,8 @@ body.light {
     --background-color2: rgb(230, 230, 230);
     --background-color3: rgb(230, 230, 230);
 
-    --nav-background-color: rgb(255, 255, 255);
-    --nav-shadow: none;
+    --nav-background-color: rgba(255, 255, 255, 0.7);
+    --nav-shadow: rgba(196, 196, 194, 0.5);
     --invert: invert(0);
 
     --background-color-footer: white;
@@ -74,8 +74,8 @@ body.dark {
     --background-color2: #28502e;
     --background-color3: #47682c;
 
-    --nav-background-color: rgb(29, 29, 25);
-    --nav-shadow: 0 2px 20px -1px rgba(29, 29, 25,1);
+    --nav-background-color: rgba(29, 29, 25, 0.8);
+    --nav-shadow: rgba(5, 5, 5, 0.5);
     --invert: invert(1);
 
     --background-color-footer: rgb(24, 24, 20);
@@ -185,7 +185,8 @@ main {
 .navMenu {
     height: 95px;
     background-color: var(--nav-background-color);
-    box-shadow: var(--nav-shadow);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 2px 10px var(--nav-shadow);
     border-top: transparent 4px solid;
     color: var(--text-color);
     width: 100%;
