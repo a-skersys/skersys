@@ -679,11 +679,15 @@ input:checked + .slider:before {
 
 h1.first-name {
     color: var(--text-color);
-    font-weight: 100;
-    font-size: 115px;
+    font-weight: 600;
+    font-size: 117px;
     margin-top: 15px;
-    margin-bottom: -50px;
+    margin-bottom: -55px;
     padding-right: 10px;
+    letter-spacing: -7px;
+    background: -webkit-linear-gradient(45deg, rgb(27, 110, 101), rgb(47, 170, 96));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h1.last-name {
@@ -691,11 +695,18 @@ h1.last-name {
     right: 0px;
     font-weight: 600;
     margin: 0;
-    margin-top: -50px;
+    margin-top: -55px;
     padding-right: 10px;
     background: -webkit-linear-gradient(45deg, rgb(27, 110, 101), rgb(47, 170, 96));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: block;
+    clip-path: inset(0.31em 0px 0px 0px);
+}
+
+.letter-k {
+    font-size: 0.89em;
+    display: inline-block;
 }
 
 .title-social {
@@ -1533,8 +1544,8 @@ footer {
     }
 
     h1.first-name {
-        margin-right: -60px;
-        font-size: 70px;
+        margin-left: 10px;
+        font-size: 75px;
     }
     
     .short-info {
