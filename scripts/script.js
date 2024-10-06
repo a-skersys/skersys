@@ -87,20 +87,27 @@ document.onmousemove = function() {
 
 // Modal
 
-var modalResume = document.getElementById("modalResume");
-var btnResume = document.getElementById("btnResume");
-var span = document.getElementsByClassName("close")[0];
+// var modalResume = document.getElementById("modalResume");
+// var btnResume = document.getElementById("btnResume");
+// var span = document.getElementsByClassName("close")[0];
 
-btnResume.onclick = function() {
-  modalResume.style.display = "block";
-}
+// btnResume.onclick = function() {
+//   modalResume.style.display = "block";
+// }
 
-span.onclick = function() {
-  modalResume.style.display = "none";
-}
+// span.onclick = function() {
+//   modalResume.style.display = "none";
+// }
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modalResume.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modalResume.style.display = "none";
+//   }
+// }
+
+// Current year
+document.addEventListener("DOMContentLoaded", function() { 
+  const currentYear = new Date().getFullYear();
+  const currentYearSpan = document.getElementById("current-year");
+  currentYearSpan.textContent = currentYear
+})
